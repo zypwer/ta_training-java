@@ -1,0 +1,1 @@
+java qa learning tasks, requires jdk and chrome to be launched. tests may be run through "mvn test" or by a button in IDE
