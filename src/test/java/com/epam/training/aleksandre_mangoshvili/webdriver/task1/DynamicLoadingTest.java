@@ -24,10 +24,10 @@ public class DynamicLoadingTest {
     @Test
     void mightHelloWorld() {
         WebElement startButton = driver.findElement(By.cssSelector("#start button"));
-        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         startButton.click();
-        webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading")));
-        WebElement finalText = driver.findElement(By.id("finish"));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading")));
+        WebElement finalText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("finish")));
         assertEquals("Hello World!", finalText.getText());
     }
 
