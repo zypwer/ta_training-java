@@ -1,6 +1,7 @@
-# Practical Task 2: Locators
+# Practical Task 2
 
-Test case: "Validate that the user can search for a position based on criteria" on https://www.epam.com/
+Test case 
+"Validate that the user can search for a position based on criteria" on https://www.epam.com/
 
 ## Locator Mapping Table
 
@@ -19,10 +20,10 @@ Test case: "Validate that the user can search for a position based on criteria" 
 
 ### Notes
 
-looks like the site changed since the task was written. there's no "All Locations" option anymore, the location field shows "All available countries" and it's already selected by default. there's also no "View and apply" button, you open the job page just by clicking the job title in the first card.
-
-the "Remote" checkbox is in the DOM twice (desktop and mobile filters), so i take the first match, which is the desktop one.
-
-findElement returns the first match, so the css locator for job cards gives the latest job, it's the first one in the list.
-
-i tried to avoid classes with generated hashes like JobCard_panel__gTD7e, since they can change after any deploy. used id, name, data-testid and text instead where i could.
+I guess the site changed since the task was written, there's no "All Locations" option anymore, the location field shows "All available countries" and itss already selected by default
+there's also no "View and apply" button, you open the job page just by clicking the job title in the first card
+the "Remote" checkbox is in the dom twice, the first one is for desktop version and the second one for mobile
+I took the first one, which is for the desktop
+findElement returns the first match, so the css locator for job cards gives the latest job, it's the first one in the list
+I tried to avoid classes with generated hashes like JobCard_panel__gTD7e(since they can change after any deploy)
+used id, name, data-testid and text instead where it was possible
